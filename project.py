@@ -42,7 +42,7 @@ class IMDSv2Supplier(aws.AwsSecurityCredentialsSupplier):
             session_token=creds.get("Token"),
         )
 
-with open("/home/ubuntu/things/folder/credentials.json") as f:
+with open("/path/credentials.json") as f:
     info = json.load(f)
 
 credentials = aws.Credentials(
