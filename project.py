@@ -6,7 +6,7 @@ import requests
 from google.auth import aws
 from google.cloud import bigquery
 
-IMDS = "http://169.254.169.254/latest"
+IMDS = "IP/latest"
 
 def _imds_token():
     return requests.put(
