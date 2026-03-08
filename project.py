@@ -53,7 +53,7 @@ credentials = aws.Credentials(
     aws_security_credentials_supplier=IMDSv2Supplier(),
 )
 
-client = bigquery.Client(project="372534660131", credentials=credentials)
+client = bigquery.Client(project="project_number_here", credentials=credentials)
 
 query = "SELECT 'Handshake Successful!' as status"
 for row in client.query(query):
