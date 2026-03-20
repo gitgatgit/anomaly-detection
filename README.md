@@ -1,6 +1,6 @@
-# Compromised accounts anomaly detection
+## Anomaly detection
 
-Pipeline for detecting Solana drain / compromised-account anomalies: samples transactions from BigQuery public Solana data, engineers wallet-level and transaction-level features, then runs Isolation Forest + Transformer autoencoder with conformal calibration to flag high-risk wallets and transactions.
+Dataset missing features, large 'unassigned' cluster.
 
 ## Access and credentials
 
