@@ -1,6 +1,6 @@
 ## Anomaly detection
 
-Dataset missing features, large 'unassigned' cluster.
+Some files obsolete, repo needs cleaning.
 
 ## Access and credentials
 
