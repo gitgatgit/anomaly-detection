@@ -27,5 +27,3 @@ This project requires the Google Cloud CLI. To install it, run the following com
 ```bash
 curl [https://sdk.cloud.google.com](https://sdk.cloud.google.com) | bash
 
-- Python with `google-auth`, `google-cloud-bigquery`, `requests`, `pandas`, `numpy`, `scikit-learn`, `torch`.
-- Execution on AWS (or an environment that can supply AWS credentials) when using the included IMDSv2-based credential supplier.
