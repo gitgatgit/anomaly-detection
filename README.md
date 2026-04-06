@@ -15,9 +15,9 @@ Update the path in `project.py` and set your BigQuery project and dataset (`proj
 
 ## Pipeline overview
 
-1. **Sample & feature tables** — Stratified sample from `bigquery-public-data.crypto_solana_mainnet_us` (Transactions, Token Transfers, Instructions), then build a feature table (`solana_drain_features`) with wallet/tx metrics (e.g. `drain_sol_ratio`, token fanout, CPI ratio).
+1. **Sample & feature tables** — 
 2. **Sequence prep** — Per-wallet transaction sequences (fixed length), with DeFi context and time deltas.
-3. **Anomaly scoring** — Isolation Forest on sequence-derived stats + Transformer autoencoder reconstruction error; scores are fused and calibrated with conformal prediction.
+3. **Anomaly scoring** — Isolation Forest on sequence-derived stats + Transformer autoencoder reconstruction error; scores are fused mean of averages (MoA) and calibrated with adaptive conformal prediction.
 4. **Output** — Wallet-level risk scores and flags, projected back to transaction rows for alerting or export.
 
 ## Requirements
