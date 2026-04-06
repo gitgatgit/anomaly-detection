@@ -19,10 +19,13 @@ Update the path in `project.py` and set your BigQuery project and dataset (`proj
 2. **Sequence prep** — Per-wallet transaction sequences (fixed length), with DeFi context and time deltas.
 3. **Anomaly scoring** — Isolation Forest on sequence-derived stats + Transformer autoencoder reconstruction error; scores are fused mean of averages (MoA) and calibrated with adaptive conformal prediction.
 4. **Output** — Wallet-level risk scores and flags, projected back to transaction rows for alerting or export.
+   
+## Prerequisites
 
-## Requirements
+This project requires the Google Cloud CLI. To install it, run the following command in your terminal:
 
-gcloud: 'curl https://sdk.cloud.google.com | bash'
+```bash
+curl [https://sdk.cloud.google.com](https://sdk.cloud.google.com) | bash
 
 - Python with `google-auth`, `google-cloud-bigquery`, `requests`, `pandas`, `numpy`, `scikit-learn`, `torch`.
 - Execution on AWS (or an environment that can supply AWS credentials) when using the included IMDSv2-based credential supplier.
