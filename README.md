@@ -22,7 +22,7 @@ Update the path in `project.py` and set your BigQuery project and dataset (`proj
 
 ## Requirements
 
-gcloud: curl https://sdk.cloud.google.com | bash
+gcloud: 'curl https://sdk.cloud.google.com | bash'
 
 - Python with `google-auth`, `google-cloud-bigquery`, `requests`, `pandas`, `numpy`, `scikit-learn`, `torch`.
 - Execution on AWS (or an environment that can supply AWS credentials) when using the included IMDSv2-based credential supplier.
