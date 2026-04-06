@@ -1,0 +1,27 @@
+optuna
+kneed
+ninja
+torchsort
+torchcp
+numpy
+pandas
+polars
+pyarrow
+torch
+scikit-learn
+scipy
+matplotlib
+seaborn
+joblib
+statsmodels
+shap
+s3fs
+pyfarmhash
+lance
+tqdm
+requests
+google-auth
+google-cloud-bigquery
+google-api-core
+# For GPU support (RAPIDS):
+# --extra-index-url=https://pypi.nvidia.com cuml-cu12==24.10.*
