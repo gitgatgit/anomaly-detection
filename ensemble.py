@@ -2871,10 +2871,10 @@ def run_synthetic_contamination_test(n_target_wallets=1500, min_test_tx=2, alpha
         ae_train_sort = np.sort(contam_wallet_raw)
     contam_wallet_cdf = np.searchsorted(ae_train_sort, contam_wallet_raw, side='right') / len(ae_train_sort)
 
-    # ── 5. Max of Averages (MoA) Ensemble ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    # ── 5. Mean of Averages (MoA) Ensemble ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     wallet_ensemble_mod = {}
     for i, w in enumerate(syn_wallets):
-        wallet_if_max = float(if_cdf_mod[w_arr == w].max())
+        wallet_if_max = float(if_cdf_mod[w_arr == w].mean())
         wallet_ae_score = float(contam_wallet_cdf[i])
         wallet_ensemble_mod[w] = (w_if * wallet_if_max) + (w_tr * wallet_ae_score)
 
